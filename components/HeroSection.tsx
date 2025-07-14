@@ -15,7 +15,7 @@ const HeroSection = () => {
   const [currentIndex, prevSlide, nextSlide, setCurrentIndex] = useScrollHero();
 
   return (
-    <div className="relative w-full h-[550px] overflow-hidden rounded-b-2xl">
+    <div className="relative w-full sm:h-[550px] h-[450px] overflow-hidden rounded-b-2xl">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -23,17 +23,17 @@ const HeroSection = () => {
         {herosDatas.map((slide, idx) => (
           <div
             key={idx}
-            className="w-full h-[550px] relative flex-shrink-0 rounded-b-2xl overflow-hidden"
+            className="w-full sm:h-[550px] h-[450px] relative flex-shrink-0 rounded-b-2xl overflow-hidden"
           >
             <Image
               src={slide.image}
               alt={slide.title}
               fill
-              className="object-cover brightness-75"
+              className="sm:object-cover object-center brightness-75"
               priority
             />
             {/* Overlay */}
-            <div className="absolute top-28 left-14 flex items-center justify-start max-w-xl w-full">
+            <div className="absolute sm:top-28 top-20 sm:left-14 left-6 flex items-center justify-start max-w-xl w-full">
               <div className={`${anton.className} text-white text-left px-6 py-4 rounded-xl`}>
                 <h2 
                   className="text-white text-4xl md:text-6xl font-extrabold uppercase tracking-wide"

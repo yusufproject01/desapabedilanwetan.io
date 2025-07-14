@@ -19,7 +19,7 @@ export default function Brand({Text} : {Text : string}) {
         height={100}
         className="w-12 h-12 object-contain"
       />
-      <p className={`${abeezee.className} ${scroll ? "bg-gradient-to-r from-[#2F5249] via-[#437057] to-[#97B067] text-transparent" : "text-white" } text-3xl font-bold bg-clip-text`}>
+      <p className={`${abeezee.className} ${scroll ? "bg-gradient-to-r from-[#2F5249] via-[#437057] to-[#97B067] text-transparent" : "text-white" } sm:text-3xl text-2xl font-bold bg-clip-text`}>
         {Text}
       </p>
     </main>

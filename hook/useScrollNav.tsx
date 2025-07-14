@@ -5,7 +5,7 @@ export default function useScrollContext() {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-        setScroll(window.scrollY > 20);
+        setScroll(window.scrollY > 15);
         });
     }, []);
     return [scroll];
