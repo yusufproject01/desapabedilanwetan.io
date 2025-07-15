@@ -37,12 +37,12 @@ const HeroSection = () => {
               <div className={`${anton.className} text-white text-left px-6 py-4 rounded-xl`}>
                 <h2 
                   className="text-white text-4xl sm:text-7xl font-extrabold uppercase tracking-wide"
-                  style={{ textShadow: "5px 5px 0px rgba(0, 0, 0, 1)" }}>
+                  style={{ textShadow: "4px 4px 0px rgba(0, 0, 0, 1)" }}>
                   {slide.title}
                 </h2>
                 <p 
                   className="text-lg sm:text-2xl text-white"
-                  style={{ textShadow: "4px 4px 0px rgba(0, 0, 0, 1)" }}
+                  style={{ textShadow: "3px 3px 0px rgba(0, 0, 0, 1)" }}
                 >
                   {slide.subtitles}
                 </p>
@@ -67,7 +67,7 @@ const HeroSection = () => {
       </button>
 
       {/* Indikator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute sm:bottom-12 bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
         {herosDatas.map((_, idx) => (
           <button
             key={idx}

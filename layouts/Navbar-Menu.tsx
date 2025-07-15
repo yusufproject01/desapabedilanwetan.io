@@ -1,6 +1,6 @@
   "use client";
 
-  import Brand from "../Typography/Brand";
+  import Brand from "../components/Typography/Brand";
   import Link from "next/link";
   import { ABeeZee } from "next/font/google";
   import { usePathname } from "next/navigation";
