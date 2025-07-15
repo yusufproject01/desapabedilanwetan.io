@@ -15,7 +15,7 @@ const HeroSection = () => {
   const [currentIndex, prevSlide, nextSlide, setCurrentIndex] = useScrollHero();
 
   return (
-    <div className="relative w-full sm:h-[550px] h-[450px] overflow-hidden rounded-b-2xl">
+    <div className="relative w-full sm:h-[500px] h-[400px] overflow-hidden rounded-b-2xl">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -23,7 +23,7 @@ const HeroSection = () => {
         {herosDatas.map((slide, idx) => (
           <div
             key={idx}
-            className="w-full sm:h-[550px] h-[450px] relative flex-shrink-0 rounded-b-2xl overflow-hidden"
+            className="w-full sm:h-[500px] h-[400px] relative flex-shrink-0 rounded-b-2xl overflow-hidden"
           >
             <Image
               src={slide.image}
@@ -33,16 +33,16 @@ const HeroSection = () => {
               priority
             />
             {/* Overlay */}
-            <div className="absolute sm:top-28 top-20 sm:left-14 left-6 flex items-center justify-start max-w-xl w-full">
+            <div className="absolute sm:top-28 top-20 sm:left-14 left-10 flex items-center justify-start sm:max-w-2xl sm:w-full w-80">
               <div className={`${anton.className} text-white text-left px-6 py-4 rounded-xl`}>
                 <h2 
-                  className="text-white text-4xl md:text-6xl font-extrabold uppercase tracking-wide"
-                  style={{ textShadow: "3px 3px 0px rgba(0, 0, 0, 1)" }}>
+                  className="text-white text-4xl sm:text-7xl font-extrabold uppercase tracking-wide"
+                  style={{ textShadow: "5px 5px 0px rgba(0, 0, 0, 1)" }}>
                   {slide.title}
                 </h2>
                 <p 
-                  className="text-lg md:text-xl text-white"
-                  style={{ textShadow: "3px 3px 0px rgba(0, 0, 0, 1)" }}
+                  className="text-lg sm:text-2xl text-white"
+                  style={{ textShadow: "4px 4px 0px rgba(0, 0, 0, 1)" }}
                 >
                   {slide.subtitles}
                 </p>
@@ -71,7 +71,7 @@ const HeroSection = () => {
         {herosDatas.map((_, idx) => (
           <button
             key={idx}
-            className={`w-3 h-3 rounded-full ${
+            className={`sm:w-3 w-2 sm:h-3 h-2 rounded-full ${
               idx === currentIndex ? "bg-white" : "bg-gray-400"
             }`}
             onClick={() => setCurrentIndex(idx)}
