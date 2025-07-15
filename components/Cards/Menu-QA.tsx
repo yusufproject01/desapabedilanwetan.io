@@ -6,12 +6,13 @@ const inter =  Inter({
     subsets: ["latin"],
 });
 
-export default function CardMenuQA({MenuOptions, NavigationLink, Icons} : {MenuOptions : string, NavigationLink : string, Icons? : any}) {
+export default function CardMenuQA({MenuOptions, NavigationLink, Icons, animationsDelay} : {MenuOptions : string, NavigationLink : string, Icons? : any, animationsDelay : string}) {
     return(
         <Link 
-            href={NavigationLink} 
-            className="sm:w-[8rem] sm:h-[8rem] w-[5rem] h-[7rem] bg-white border border-slate-200 shadow-lg rounded-lg flex flex-col items-center justify-center
-            hover:scale-105 transition duration-300 ease-in-out hover:brightness-95 px-2"
+            href={NavigationLink}
+            style={{ animationDelay: animationsDelay }}
+            className={`sm:w-[8rem] sm:h-[8rem] w-[5rem] h-[7rem] bg-white border border-slate-200 shadow-lg rounded-lg flex flex-col items-center justify-center
+            hover:scale-105 transition duration-300 ease-in-out hover:brightness-95 px-2 animate__bounceInUp animate__animated animate__slow` }
         >
             <div className="w-full h-2/3 flex items-center justify-center border-b border-gray-300">
                 <Image

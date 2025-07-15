@@ -49,6 +49,17 @@
               Beranda
             </Link>
             <Link
+                onClick={toggleMenu}
+                href="/profile"
+                className={
+                  pathname === "/profile"
+                    ? "h-full flex justify-center items-center border-b-2 border-[#2F5249] font-bold"
+                    : "h-full flex justify-center items-center border-0"
+                }
+              >
+                Profil
+            </Link>
+            <Link
               href="/berita"
               className={
                 pathname === "/berita"
@@ -124,6 +135,17 @@
                 }
               >
                 Beranda
+              </Link>
+              <Link
+                onClick={toggleMenu}
+                href="/profile"
+                className={
+                  pathname === "/profile"
+                    ? "h-full flex justify-center items-center border-b-2 border-[#2F5249] font-bold"
+                    : "h-full flex justify-center items-center border-0"
+                }
+              >
+                Profil
               </Link>
               <Link
                 onClick={toggleMenu}
