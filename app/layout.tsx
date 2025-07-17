@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import 'animate.css';
+import "animate.css";
+// import "leaflet/dist/leaflet.css";
 import NavbarMenu from "@/layouts/Navbar-Menu";
 import ScrollToTop from "@/fiture/ScrollToTop";
 
@@ -30,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ScrollToTop/>
+        <ScrollToTop />
         <NavbarMenu />
         {children}
       </body>

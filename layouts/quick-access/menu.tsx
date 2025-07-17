@@ -6,7 +6,7 @@ export default function Menu() {
       <section className="w-full h-full sm:flex sm:items-center sm:justify-center sm:gap-x-6 gap-x-2 sm:gap-y-0 gap-y-2 grid grid-cols-4">
         <CardMenuQA
           animationsDelay={"2.3s"}
-          MenuOptions="Location"
+          MenuOptions="Lokasi"
           NavigationLink="/"
           Icons={"/Icons/Menu/map.png"}
         />
