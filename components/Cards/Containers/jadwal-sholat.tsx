@@ -55,7 +55,7 @@ export default function JadwalSholat() {
               />
               <h1 className="text-lg">{item.nama}</h1>
             </div>
-            <h1 className="text-xl font-semibold">{item.waktu}</h1>
+            <h1 className="text-xl">{item.waktu}</h1>
           </div>
         ))}
       </section>
