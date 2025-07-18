@@ -1,10 +1,10 @@
 "use client";
 
-import useScrollHero from "@/hook/useScrollHero";
 import { herosDatas } from "@/public/public-datas/hero";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Outfit } from "next/font/google";
+import useScrollImage from "@/hook/useScrollHero";
 
 const anton = Outfit({
   weight: "700",
@@ -12,7 +12,9 @@ const anton = Outfit({
 });
 
 const HeroSection = () => {
-  const [currentIndex, prevSlide, nextSlide, setCurrentIndex] = useScrollHero();
+  const [currentIndex, prevSlide, nextSlide, setCurrentIndex] = useScrollImage({
+    time: 5000,
+  });
 
   return (
     <div className="relative w-full sm:h-[500px] h-[400px] overflow-hidden rounded-b-2xl">
@@ -34,13 +36,16 @@ const HeroSection = () => {
             />
             {/* Overlay */}
             <div className="absolute sm:top-28 top-20 sm:left-14 left-10 flex items-center justify-start sm:max-w-2xl sm:w-full w-80">
-              <div className={`${anton.className} text-white text-left px-6 py-4 rounded-xl`}>
-                <h2 
+              <div
+                className={`${anton.className} text-white text-left px-6 py-4 rounded-xl`}
+              >
+                <h2
                   className="text-white text-4xl sm:text-7xl font-extrabold uppercase tracking-wide"
-                  style={{ textShadow: "4px 4px 0px rgba(0, 0, 0, 1)" }}>
+                  style={{ textShadow: "4px 4px 0px rgba(0, 0, 0, 1)" }}
+                >
                   {slide.title}
                 </h2>
-                <p 
+                <p
                   className="text-lg sm:text-2xl text-white"
                   style={{ textShadow: "3px 3px 0px rgba(0, 0, 0, 1)" }}
                 >

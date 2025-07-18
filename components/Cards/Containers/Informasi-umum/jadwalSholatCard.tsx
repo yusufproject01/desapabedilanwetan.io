@@ -14,7 +14,7 @@ export default function JadwalSholat() {
   return DatasJadwalSholat.map((data, index) => (
     <main
       key={data.id}
-      className="sm:w-96 w-full sm:h-auto h-auto rounded-lg border-2 border-slate-200 shadow-md overflow-hidden mb-4"
+      className="sm:w-[400px] w-[300px] flex-shrink-0 sm:h-auto h-auto rounded-lg bg-white border-2 border-slate-200 shadow-md overflow-hidden mb-4"
     >
       {/* Header */}
       <section className="w-full sm:h-[4rem] border-b border-slate-300 bg-teal-700 flex items-center justify-center">

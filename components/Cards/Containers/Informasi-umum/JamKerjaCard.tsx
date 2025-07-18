@@ -13,7 +13,7 @@ const inter = Inter({
 
 export default function JamKerjaCard() {
   return (
-    <main className="sm:w-96 w-full rounded-lg border-2 border-slate-200 shadow-md overflow-hidden mb-4">
+    <main className="sm:w-[400px] w-[300px] flex-shrink-0 rounded-lg bg-white border-2 border-slate-200 shadow-md overflow-hidden mb-4">
       {/* Header */}
       <section className="w-full sm:h-[4rem] border-b border-slate-300 bg-teal-700 flex items-center justify-center">
         <div className="w-12 h-12 flex justify-center items-center">

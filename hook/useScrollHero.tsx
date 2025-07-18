@@ -1,7 +1,13 @@
+// "use client";
+
 import { useEffect, useRef, useState } from "react";
 import { herosDatas } from "@/public/public-datas/hero";
 
-const useScrollHero = (): [
+const useScrollImage = ({
+  time,
+}: {
+  time: number;
+}): [
   number,
   () => void,
   () => void,
@@ -9,7 +15,7 @@ const useScrollHero = (): [
 ] => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const interval = 5000;
+  const interval = time || 5000;
 
   const resetTimeout = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -18,7 +24,9 @@ const useScrollHero = (): [
   useEffect(() => {
     resetTimeout();
     timeoutRef.current = setTimeout(() => {
-      setCurrentIndex((prev) => (prev === herosDatas.length - 1 ? 0 : prev + 1));
+      setCurrentIndex((prev) =>
+        prev === herosDatas.length - 1 ? 0 : prev + 1
+      );
     }, interval);
 
     return () => resetTimeout();
@@ -35,4 +43,4 @@ const useScrollHero = (): [
   return [currentIndex, prevSlide, nextSlide, setCurrentIndex];
 };
 
-export default useScrollHero;
+export default useScrollImage;
