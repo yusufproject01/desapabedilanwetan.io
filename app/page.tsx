@@ -27,7 +27,7 @@ export default function Home() {
           <JamKerjaCard />
         </div>
       </section>
-      <section className="w-full sm:h-[80vh] sm:px-4 sm:py-4 flex items-center justify-center border border-slate-300">
+      <section className="w-full sm:h-[80vh] sm:px-4 sm:py-4 flex items-center justify-center">
         <InformasiDesa />
       </section>
     </main>
