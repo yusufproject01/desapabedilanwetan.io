@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Outfit } from "next/font/google";
 import useScrollImage from "@/hook/useScrollHero";
 
-const anton = Outfit({
+const outfit = Outfit({
   weight: "700",
   subsets: ["latin"],
 });
@@ -37,7 +37,7 @@ const HeroSection = () => {
             {/* Overlay */}
             <div className="absolute sm:top-28 top-20 sm:left-14 left-10 flex items-center justify-start sm:max-w-2xl sm:w-full w-80">
               <div
-                className={`${anton.className} text-white text-left px-6 py-4 rounded-xl`}
+                className={`${outfit.className} text-white text-left px-6 py-4 rounded-xl`}
               >
                 <h2
                   className="text-white text-4xl sm:text-7xl font-extrabold uppercase tracking-wide"

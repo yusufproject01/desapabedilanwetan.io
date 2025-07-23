@@ -1,15 +1,11 @@
 import { FaClock, FaMosque } from "react-icons/fa";
-import { FaCalendarDays } from "react-icons/fa6";
-import { IoLocationOutline } from "react-icons/io5";
-import { Inter } from "next/font/google";
-import Image from "next/image";
-import { DatasJadwalSholat } from "@/public/public-datas/data-jadwal-sholat";
+// import { Inter } from "next/font/google";
 import { DatasJamKerja } from "@/public/public-datas/data-jam-kerja";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: "500",
-});
+// const inter = Inter({
+//   subsets: ["latin"],
+//   weight: "500",
+// });
 
 export default function JamKerjaCard() {
   return (

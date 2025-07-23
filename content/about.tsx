@@ -2,6 +2,7 @@ import { AboutDatas } from "@/public/public-datas/about";
 import Image from "next/image";
 import { Inter, Poppins } from "next/font/google";
 import Populations from "./populations";
+import HeadText from "@/components/Typography/HeadText";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,11 +38,7 @@ export default function About() {
         ))}
       </section>
       <section className="sm:w-1/2 w-full h-full 300 flex flex-col justify-center items-center gap-y-2">
-        <h1
-          className={`${poppins.className} sm:text-4xl text-2xl text-slate-600`}
-        >
-          Statistik Penduduk Desa
-        </h1>
+        <HeadText>Statistik Penduduk Desa</HeadText>
         <div className="w-full h-full flex justify-around items-center gap-2">
           <Populations />
         </div>

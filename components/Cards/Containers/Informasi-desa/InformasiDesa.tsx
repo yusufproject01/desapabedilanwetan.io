@@ -13,6 +13,7 @@ const inter = Inter({
 
 const poppins = Poppins({
   weight: "600",
+  subsets: ["latin"],
 });
 
 export default function InformasiDesa() {

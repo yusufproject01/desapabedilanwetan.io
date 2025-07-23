@@ -3,7 +3,6 @@
 import ButtonMapOpen from "@/components/buttons/Btn-Map";
 import dynamic from "next/dynamic";
 // import Map from "@/components/Map";
-import { FaMosque } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
 const Map = dynamic(() => import("@/components/Map"), { ssr: false });
